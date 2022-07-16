@@ -1,4 +1,5 @@
 import css from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ good, neutral, bad, onLeaveFeedback }) => {
   const props = { good, neutral, bad };
@@ -18,3 +19,10 @@ const FeedbackOptions = ({ good, neutral, bad, onLeaveFeedback }) => {
 };
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+  bad: PropTypes.number.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
